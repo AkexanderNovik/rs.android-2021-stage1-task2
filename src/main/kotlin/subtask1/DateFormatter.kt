@@ -11,7 +11,7 @@ class DateFormatter {
         var value = "Такого дня не существует"
         try {
             var date = LocalDate.of(year.toInt(), month.toInt(), day.toInt())
-            val localeRu = Locale("ru")
+            val localeRu = Locale("ru", "RU")
             value = date.format(DateTimeFormatter.ofPattern("dd MMMM, EEEE", localeRu))
         } catch (e: Exception) {
         }
