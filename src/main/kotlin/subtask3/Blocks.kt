@@ -9,9 +9,9 @@ class Blocks {
     fun getData(blockA: Array<*>, blockB: KClass<*>): Any {
         return when (blockB) {
             String::class -> {
-                val z = StringBuffer()
-                blockA.filterIsInstance<String>().forEach { z.append(it) }
-                return z.toString()
+                val result = StringBuffer()
+                blockA.filterIsInstance<String>().forEach { result.append(it) }
+                return result.toString()
             }
             Int::class -> blockA.filterIsInstance<Int>().sum()
             LocalDate::class -> findClosestDate(blockA)

@@ -14,12 +14,12 @@ repositories {
 
 test {
     afterSuite { desc, result ->
-    if (!desc.parent)
-        println("${result.resultType} " +
-            "(${result.testCount} tests, " +
-            "${result.successfulTestCount} successes, " +
-            "${result.failedTestCount} failures, " +
-            "${result.skippedTestCount} skipped)")
+        if (!desc.parent)
+            println("${result.resultType} " +
+                    "(${result.testCount} tests, " +
+                    "${result.successfulTestCount} successes, " +
+                    "${result.failedTestCount} failures, " +
+                    "${result.skippedTestCount} skipped)")
     }
 }
 
@@ -36,3 +36,4 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
