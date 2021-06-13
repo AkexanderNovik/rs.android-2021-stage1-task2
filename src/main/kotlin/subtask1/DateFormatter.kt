@@ -12,7 +12,7 @@ class DateFormatter {
             val date = LocalDate.of(year.toInt(), month.toInt(), day.toInt())
             date.format(DateTimeFormatter.ofPattern("dd MMMM, EEEE", Locale("ru")))
         } catch (e: Exception) {
-            "Такого дня не существует"
+            "РўР°РєРѕРіРѕ РґРЅСЏ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚"
         }
     }
 }
